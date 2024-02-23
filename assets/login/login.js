@@ -1,10 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Image, Text, View } from 'react-native';
 import SignButton from "../components/signin-button";
 import TextUsername from "../components/username-input";
 import TextPassword from "../components/password-input";
-
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase_config";
+import { useNavigation } from "@react-navigation/core";
 function Login({ navigation }) {
+
+    const [email, setEmail] = React.useState("");
+    const [password, setpassword] = useState(""); 
+
+    useEffect(()=>{
+        auth.onAuthStateChanged(user =>{
+            if(user){
+                navigation.navigate("map")
+            }
+        })
+    }, [])
+
+    const handleLogin = () => {
+
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            })
+        .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert("Sai email hoặc password")});
+
+    }
 
   return (
     <View style ={{
@@ -36,8 +62,8 @@ function Login({ navigation }) {
         }}>
             Chào mừng quay trở lại!
         </Text>
-        <TextUsername></TextUsername>
-        <TextPassword></TextPassword>
+        <TextUsername onChangeText={setEmail} email={email}></TextUsername>
+        <TextPassword onChangeText={setpassword} password={password}></TextPassword>
         <Text style={{ 
             fontSize: 14,
             fontWeight:500,
@@ -48,7 +74,7 @@ function Login({ navigation }) {
         }}>
             Quên mật khẩu?
         </Text>
-        <SignButton></SignButton>
+        <SignButton onPress={handleLogin}></SignButton>
         <Text style={{ 
             fontSize: 14,
             fontWeight:500,

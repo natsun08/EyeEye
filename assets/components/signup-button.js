@@ -3,10 +3,11 @@ import { Text, StyleSheet, Pressable } from 'react-native';
 
 
 
-export default function SignButton({ onPress }) {
+export default function SignUpButton(props) {
+  const { onPress, title = 'Save' } = props;
   return (
     <Pressable style={styles.button} onPress={onPress}>
-      <Text style={styles.text}>Đăng nhập</Text>
+      <Text style={styles.text}>Đăng ký</Text>
     </Pressable>
   );
 }
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     elevation: 3,
     backgroundColor: '#006BFF',
-    marginTop: 10,
+    marginTop: -10,
   },
   text: {
     fontSize: 16,

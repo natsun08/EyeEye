@@ -1,9 +1,7 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, TextInput} from 'react-native';
 
-const TextUsername = () => {
-  const [text, onChangeText] = React.useState();
-
+const TextUsername = ({ onChangeText, email }) => {
   return (
     <SafeAreaView>
       <TextInput
@@ -23,7 +21,7 @@ const styles = StyleSheet.create({
     marginTop: 60,
     padding: 10,
     borderRadius: 10,
-    backgroundColor: '#6BA9FF',
+    backgroundColor: '#E9F6FF',
   },
 });
 

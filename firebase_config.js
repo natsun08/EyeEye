@@ -1,6 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { getAnalytics, isSupported } from "firebase/analytics";
+import { getAuth,initializeAuth,initializeRecaptchaConfig, getReactNativePersistence } from "firebase/auth";
+import ReactNativeAsyncStorage from "@react-native-async-storage/async-storage";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -9,6 +11,7 @@ import { getAnalytics } from "firebase/analytics";
 const firebaseConfig = {
   apiKey: "AIzaSyANvIiVEQdxjTGOs0JF4vSxdWv9-R6vyLg",
   authDomain: "eyeeye-31840.firebaseapp.com",
+  databaseURL: "https://eyeeye-31840-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "eyeeye-31840",
   storageBucket: "eyeeye-31840.appspot.com",
   messagingSenderId: "616891630617",
@@ -19,3 +22,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+const auth = initializeAuth(app, {persistence: getReactNativePersistence(ReactNativeAsyncStorage)});
+initializeRecaptchaConfig(auth);
+
+export {app, analytics, auth}
+
