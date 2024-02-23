@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Image, View, TouchableOpacity } from 'react-native'
 import { Text, Layout, Avatar, withStyles, List } from '@ui-kitten/components'
 
+import User from '../../components/leaderboard-comp/user'
+
 const DATA = [
   {
     id: 1,
@@ -18,6 +20,10 @@ const DATA = [
     score: '7.0'    } //số store dạng float int g đó thì convert về nhé meo
 ]
 
+class _Leaderboard extends Component {
+  // ...
+}
+
 function Leaderboard() {
   return (
     <List
@@ -31,7 +37,6 @@ function Leaderboard() {
 
 const renderItem = ({ item }) => (
   <View style={this.props.themedStyle.card}>
-    
     <View style={this.props.themedStyle.cardHeader}>
       <Text category="s1" style={this.props.themedStyle.cardTitle}>
         {item.username}
@@ -52,6 +57,33 @@ const renderItem = ({ item }) => (
   </View>
 )
 
-
-
-export default Leaderboard
+export default Leaderboard = withStyles(_Leaderboard, theme => ({
+  container: {
+    flex: 1
+  },
+  card: {
+    backgroundColor: theme['color-basic-100'],
+    marginBottom: 25
+  },
+  cardImage: {
+    width: '100%',
+    height: 300
+  },
+  cardHeader: {
+    padding: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  cardTitle: {
+    color: theme['color-basic-1000']
+  },
+  cardAvatar: {
+    marginRight: 16
+  },
+  cardContent: {
+    padding: 10,
+    borderWidth: 0.25,
+    borderColor: theme['color-basic-600']
+  }
+}))
