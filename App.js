@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Login from './assets/login/login';
+import Regist from './assets/regist/registration';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,8 +19,7 @@ export default function App() {
   return (
     <NavigationContainer>
         <Stack.Navigator>
-            <Stack.Screen name = "Login" component={Login}/>
-            <Stack.Screen name = "Regist" component={Login}/>
+            <Stack.Screen name = "Regist" component={Regist}/>
         </Stack.Navigator>
         {/* <MyTabs /> */}
     </NavigationContainer>
