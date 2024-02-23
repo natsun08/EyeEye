@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import Home from './assets/Home/Home';
 import Login from './assets/login/login';
 
 const Stack = createNativeStackNavigator();
@@ -20,6 +20,7 @@ export default function App() {
         <Stack.Navigator>
             <Stack.Screen name = "Login" component={Login}/>
             <Stack.Screen name = "Regist" component={Login}/>
+            <Stack.Screen name = "Home" component={Home}/>
         </Stack.Navigator>
         {/* <MyTabs /> */}
     </NavigationContainer>
