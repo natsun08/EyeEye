@@ -3,26 +3,22 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import { mapping, light as lightTheme } from '@eva-design/eva'
+import { ApplicationProvider } from 'react-native-ui-kitten'
+
 import Login from './assets/login/login';
 import Regist from './assets/regist/registration';
+import tabNavigator from './assets/tabnavigator/tab-navigator';
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
-  // return (
-  //   <View style={styles.container}>
-  //     <Text>Open up App.js to start working on your app!</Text>
-  //     <StatusBar style="auto" />
-  //   </View>
-  // );
 
+
+export default function App() {
   return (
-    <NavigationContainer>
-        <Stack.Navigator>
-            <Stack.Screen name = "Regist" component={Regist}/>
-        </Stack.Navigator>
-        {/* <MyTabs /> */}
-    </NavigationContainer>
+    <ApplicationProvider mapping={mapping} theme={lightTheme}>
+        <TabNavigator />
+    </ApplicationProvider>
   );
   
 }
