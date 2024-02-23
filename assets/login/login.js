@@ -14,7 +14,7 @@ function Login({ navigation }) {
     useEffect(()=>{
         auth.onAuthStateChanged(user =>{
             if(user){
-                navigation.navigate("map")
+                navigation.navigate("App")
             }
         })
     }, [])
@@ -81,7 +81,7 @@ function Login({ navigation }) {
             color: '#000000',
             margin: 2,
             padding: 50,
-        }}>
+        }} onPress={()=> {navigation.navigate("Regist")}}>
             Tạo tài khoản mới
         </Text>
         <Text style={{ 
