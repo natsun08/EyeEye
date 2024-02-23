@@ -1,89 +1,215 @@
-import React, { Component } from 'react'
-import { Image, View, TouchableOpacity } from 'react-native'
-import { Text, Layout, Avatar, withStyles, List } from '@ui-kitten/components'
+import React from 'react';
+import {FlatList, SafeAreaView,Image,  Item, ScrollView, StyleSheet, Text, View} from 'react-native';
+import { Card } from 'react-native-paper';
 
-import User from '../../components/leaderboard-comp/user'
-
-const DATA = [
-  {
-    id: 1,
-    username: 'Đào Minh Dưa',
-    avatarURI:
-      '../../assets/dua.jpg',
-    score: '9.8'
-    },
-  {
-    id: 2,
-    username: 'La Sắc Mầm',
-    avatarURI:
-      '../../assets/mam.jpg',
-    score: '7.0'    } //số store dạng float int g đó thì convert về nhé meo
+DATA = [
+  {id:1,
+  username: "Mầm",
+  image:'../../../assets/mam.jpg',
+  score:2
+  },
+  {id:2,
+    username: "Dưa",
+    image:'../../../assets/dua.jpg',
+    score:9
+  },
+  {id:3,
+    username: "Tôm",
+    image:'../../../assets/tom.jpg',
+    score:7
+  },
+  {id:4,
+    username: "Ná",
+    image:'../../../assets/dua.jpg',
+    score:4.5
+  },
+  {id:5,
+    username: "Bo bo",
+    image:'../../../assets/dua.jpg',
+    score:4.5
+  },
+  {id:6,
+    username: "Moon",
+    image:'../../../assets/dua.jpg',
+    score:4.5
+  },
+  {id:7,
+    username: "Pate",
+    image:'../../../assets/dua.jpg',
+    score:4.5
+  },
+  {id:8,
+    username: "Hoshi",
+    image:'../../../assets/dua.jpg',
+    score:4.5
+  }
 ]
 
-class _Leaderboard extends Component {
-  // ...
-}
-
-function Leaderboard() {
-  return (
-    <List
-      style={this.props.themedStyle.container}
-      data={DATA}
-      renderItem={renderItem}
-      keyExtractor={DATA.id}
-    />
-  )
-}
-
-const renderItem = ({ item }) => (
-  <View style={this.props.themedStyle.card}>
-    <View style={this.props.themedStyle.cardHeader}>
-      <Text category="s1" style={this.props.themedStyle.cardTitle}>
-        {item.username}
-      </Text>
-      <TouchableOpacity
-        onPress={() => this.props.navigation.navigate('Profile')}
-      >
-        <Avatar
-          source={{ uri: item.avatarURI }}
-          size="small"
-          style={this.props.themedStyle.cardAvatar}
-        />
-      </TouchableOpacity>
-    </View>
-    <View style={this.props.themedStyle.cardContent}>
-      <Text category="p2">{item.score}</Text>
-    </View>
-  </View>
-)
-
-export default Leaderboard = withStyles(_Leaderboard, theme => ({
+const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    paddingTop: 22,
+  },
+  sectionHeader: {
+    paddingTop: 2,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingBottom: 2,
+    fontSize: 14,
+    fontWeight: 'bold',
+    backgroundColor: 'rgba(247,247,247,1.0)',
   },
   card: {
-    backgroundColor: theme['color-basic-100'],
-    marginBottom: 25
-  },
-  cardImage: {
-    width: '100%',
-    height: 300
-  },
-  cardHeader: {
-    padding: 10,
+    padding: 5,
     flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between'
+    alignItems: 'flex-start',
+    paddingLeft: 30
+    
   },
-  cardTitle: {
-    color: theme['color-basic-1000']
-  },
-  cardAvatar: {
-    marginRight: 16
-  },
-  cardContent: {
+  name: {
     padding: 10,
-    borderWidth: 0.25,
-    borderColor: theme['color-basic-600']
+    fontSize: 25,
+    fontWeight: '700',
+    height: 40,
+  },
+  score: {
+    paddingLeft: 20,
+    padding: 10,
+    fontSize: 19,
+    height: 40,
+    
+  },
+  tinyLogo: {
+    flex:1,
+    flexDirection: 'column',
+    alignSelf: 'flex-start',
+    padding: 10,
+    marginLeft: 30,
+    maxWidth: 60,
+    height: 60,
+    borderRadius: 10,
+    overflow: "hidden",
+  },
+  text: {
+    paddingBottom:12,
+    paddingLeft: 15,
+    flex:2,
+    alignSelf: 'center'
   }
-}))
+});
+
+const Leaderboard = () => {
+   x=1;
+  return (
+    <View style={styles.container}>
+      
+      <View style={{
+        paddingTop: 30,
+        marginTop:-20,
+        width:410,
+        height:200,
+        backgroundColor:'#006BFF',
+        flexDirection: 'row'
+      }}>  
+      <Image  //ảnh ava người dùng
+          style={{
+            height: 120,
+            width:120,
+            marginTop:20,
+            marginLeft: 20,
+            borderRadius: 70,
+            overflow: "hidden",
+            
+          }}
+          source={require('../../../assets/mam.jpg')}
+      />
+      
+      <View>
+          <Text style={{
+            alignSelf:'center',
+            fontSize:30,
+            color: '#FFFFFF',
+            fontWeight: 'bold'
+          }}>
+            La Sắc Mầm
+          </Text>
+          <Text  style= {{
+              fontSize: 15,
+              alignSelf: 'center',
+              color: '#FFFFFF',
+              fontWeight: 'bold',
+              paddingTop: 10
+          }}>
+            Bạn xếp thứ
+          </Text>
+          <View style= {{
+            flexDirection:'row',
+            justifyContent: 'flex-end',
+            alignSelf: 'center',
+            paddingLeft: 50
+          }}>
+            <Text style= {{
+                fontSize: 70,
+                color: '#FFFFFF',
+                fontWeight: 'bold'
+                  //điền rank vào nha rip hachi
+            }}>
+              3
+            </Text> 
+            <Text style={{
+              paddingTop: 20,
+              paddingLeft: 20,
+              alignSelf: 'flex-start',
+              color: '#FFFFFF',
+              fontSize: 10,
+              fontWeight: '600'
+            }}>
+              Tăng X bậc so với{"\n"}
+              tuần trước
+            </Text>
+          </View>
+        </View>
+      </View>
+      <Text style= {{
+          fontSize: 17,
+          alignSelf: 'center',
+          paddingTop: 20,
+          fontWeight: 500
+      }}>
+        Tuần này
+      </Text>
+      <Text style={{
+        paddingLeft: 30,
+        paddingBottom: 15,
+        paddingTop: 20,
+      }}>
+        Thứ hạng sống khỏe
+      </Text>
+      <FlatList
+        data={DATA} //data ng dùng m sort cao tới thấp nhé meo meo
+        renderItem={({item}) => 
+        <View style={styles.card}>
+            <Text style={{
+              fontSize:15,
+              paddingTop: 15,
+              fontWeight:'bold'
+            }}>
+              {x++}
+            </Text>
+            <Image
+                style={styles.tinyLogo}
+                // source={{uri: item.image}}
+                source={require('../../../assets/dua.jpg')} //t k lấy url từ data đc huhu
+            />
+            <View style={styles.text}>
+              <Text style={styles.name}>{item.username}</Text>
+              <Text style={styles.item}>   Chỉ số sống khỏe: {item.score}/10</Text>
+            </View>
+        </View>}
+        keyExtractor={item => item.id}
+      />
+    </View>
+  );
+};
+
+export default Leaderboard;
