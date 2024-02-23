@@ -3,8 +3,7 @@ import { Text, StyleSheet, Pressable } from 'react-native';
 
 
 
-export default function SignButton(props) {
-  const { onPress, title = 'Save' } = props;
+export default function SignButton({ onPress }) {
   return (
     <Pressable style={styles.button} onPress={onPress}>
       <Text style={styles.text}>Đăng nhập</Text>
