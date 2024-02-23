@@ -2,15 +2,10 @@
 // import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-
 import * as eva from '@eva-design/eva';
 import { ApplicationProvider,IconRegistry, Layout, Text  } from '@ui-kitten/components'
 import { EvaIconsPack } from '@ui-kitten/eva-icons'
-
 import { mapping, light as lightTheme } from '@eva-design/eva'
-import { ApplicationProvider } from 'react-native-ui-kitten'
-
 import Home from './assets/Home/Home';
 import Login from './assets/login/login';
 import Regist from './assets/regist/registration';
@@ -51,12 +46,12 @@ export default () => (
  // T comment đống trên để có g m vẫn vô đc 3 cái page login regist home nhé meo meo
 
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+// });
 // này là stylesheet vô dụng vl nhưng k dám xóa lời nguyền của dev 

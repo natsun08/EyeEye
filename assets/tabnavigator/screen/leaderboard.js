@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Image, View, TouchableOpacity } from 'react-native'
 import { Text, Layout, Avatar, withStyles, List } from '@ui-kitten/components'
 
-import User from '../../components/leaderboard-comp/user'
+// import User from '../../components/leaderboard-comp/user'
 
 const DATA = [
   {

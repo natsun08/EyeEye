@@ -14,7 +14,7 @@ function Login({ navigation }) {
     useEffect(()=>{
         auth.onAuthStateChanged(user =>{
             if(user){
-                navigation.navigate("Home")
+                navigation.navigate("map")
             }
         })
     }, [])
