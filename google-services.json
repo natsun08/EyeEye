@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "616891630617",
+    "firebase_url": "https://eyeeye-31840-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "eyeeye-31840",
+    "storage_bucket": "eyeeye-31840.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616891630617:android:f11aa8d1da09d92cebd688",
+        "android_client_info": {
+          "package_name": "com.giadinhsocho.eyeeye"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUcomN2xCYij-d-khQU7ej213IX-i6Df4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
