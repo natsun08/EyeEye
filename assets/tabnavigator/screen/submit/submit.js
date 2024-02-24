@@ -201,12 +201,12 @@ function Submit ({navigation}) {
                 alignSelf:'center',
                 paddingHorizontal: '3%',
             }}  
-            placeholder='ghi chú thêm của bạn'
+            placeholder='Ghi chú thêm của bạn'
             />
         </View> 
 
         <TouchableOpacity
-            onPress={() => Alert.alert('Đóng góp của bạn \n đã được ghi nhận')}
+            onPress={()=>{navigation.navigate("Thankyou")}}
             title='Đóng góp'
             style={{
                 backgroundColor:'#007AFF',

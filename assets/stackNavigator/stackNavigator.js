@@ -5,6 +5,8 @@ import Regist from '../regist/registration';
 import MyTabs from '../tabnavigator/tab-navigator';
 import Blink from '../tabnavigator/screen/blink/blink';
 import Submit from '../tabnavigator/screen/submit/submit';
+import Thankyou from '../tabnavigator/screen/submit/thankyou';
+
 const Stack = createNativeStackNavigator();
 
 function StackNav() {
@@ -15,6 +17,7 @@ return(
     <Stack.Screen name = "App" component={MyTabs} options={{headerShown:false}}/>
     <Stack.Screen name = "Blink" component={Blink} options={{headerShown:false}}/>
     <Stack.Screen name = "Submit" component={Submit} options={{headerShown:false}}/>
+    <Stack.Screen name = "Thankyou" component={Thankyou} options={{headerShown:false}}/>
 
 </Stack.Navigator>
 
