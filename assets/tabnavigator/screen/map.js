@@ -2,6 +2,16 @@ import React, {useState} from 'react';
 import MapView , {  Marker,Heatmap  } from 'react-native-maps';
 import { StyleSheet, View, Text, Image } from 'react-native';
 
+function Map ({navigation}) {
+  return (
+      <Layout style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <Text
+            onPress={()=>{navigation.navigate("Submit")}}>
+              Map
+          </Text>
+      </Layout>
+  )
+}
 export default function App() {
 
   const [mapLat, setMapLat] = useState(6.841776681);
