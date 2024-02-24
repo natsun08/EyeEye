@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import MapView , {  Marker,Heatmap  } from 'react-native-maps';
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 
-export default function App() {
+export default function App({navigation}) {
   // Function to handle button press
   const handleButtonPress = () => {
     // Handle button press action here
@@ -38,7 +38,7 @@ export default function App() {
           source={require('../../../assets/header.png')}
       />
       {/* Button component */}
-      <TouchableOpacity style={styles.button1} onPress={handleButtonPress}>
+      <TouchableOpacity style={styles.button1} onPress={()=>{navigation.navigate('Submit')}}>
         <Text style={styles.buttonText1}>Cập nhật chỗ nghỉ mới</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button2} onPress={handleButtonPress}>
