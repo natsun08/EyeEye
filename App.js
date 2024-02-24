@@ -6,10 +6,10 @@ import * as eva from '@eva-design/eva';
 import { ApplicationProvider,IconRegistry, Layout, Text  } from '@ui-kitten/components'
 import { EvaIconsPack } from '@ui-kitten/eva-icons'
 import { mapping, light as lightTheme } from '@eva-design/eva'
-import Home from './assets/Home/Home';
 import Login from './assets/login/login';
 import Regist from './assets/regist/registration';
 import MyTabs from './assets/tabnavigator/tab-navigator';
+import StackNav from './assets/stackNavigator/stackNavigator';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +20,7 @@ export default () => (
     <>
       <IconRegistry icons={EvaIconsPack} />
       < ApplicationProvider {...eva} theme={eva.light}>
-          <MyTabs />
+        <StackNav/>
       </ApplicationProvider>
     </>
   </NavigationContainer>
