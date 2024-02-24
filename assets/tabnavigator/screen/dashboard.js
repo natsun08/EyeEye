@@ -28,7 +28,7 @@ const DATA = [
       drink: 6},
 ]
 
-const Dashboard = () => {
+function Dashboard ({navigation})  {
   
   const windowWidth = Dimensions.get('window').width;
   w = windowWidth*2
@@ -217,7 +217,9 @@ const Dashboard = () => {
                                             color: '#FF3C3C',
                                             textDecorationLine: 'underline',
                                             fontSize:12
-                                        }}>
+                                            }}
+                                            onPress={()=>{navigation.navigate("Blink")}}
+                                        >
                                             Xem thêm
                                         </Text>
                                     </View>
@@ -506,4 +508,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
+
+export default Dashboard;
 
