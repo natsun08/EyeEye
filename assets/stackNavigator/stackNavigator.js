@@ -9,7 +9,7 @@ const Stack = createNativeStackNavigator();
 
 function StackNav() {
 return(
-<Stack.Navigator>
+<Stack.Navigator screenOptions={{gestureEnabled:false}}>
     <Stack.Screen name = "Login" component={Login} options={{ headerShown: false}} />
     <Stack.Screen name = "Regist" component={Regist} options={{ headerShown: false }}/>
     <Stack.Screen name = "App" component={MyTabs} options={{headerShown:false}}/>
