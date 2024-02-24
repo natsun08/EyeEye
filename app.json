@@ -23,6 +23,11 @@
         "backgroundColor": "#ffffff"
       }
     },
+    "config": {
+      "googleMaps": {
+        "apiKey": "AIzaSyADofedqeWs_vTD8KJ0n3szIGvyrLjQExE"
+      }
+    },
     "web": {
       "favicon": "./assets/favicon.png"
     }
