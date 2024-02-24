@@ -96,15 +96,31 @@ const styles = StyleSheet.create({
 });
 
 const Leaderboard = () => {
-   x=1;
+   x=1; //để print ra stt 1 2 3 4 5 cho leaderboard
   return (
     <View style={styles.container}>
-      
+      <View
+                style={[{
+                    height: 240,
+                    width: 500,
+                    borderRadius: 100,
+                    marginVertical: 0,
+                    marginLeft:-5,
+                    backgroundColor: '#006BFF',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'absolute',
+                    zIndex:-999
+                },
+                {
+                    transform: [{rotateZ: '170deg'}]
+                },
+            ]}></View>
       <View style={{
         paddingTop: 30,
         marginTop:-20,
         width:420,
-        height:200,
+        height:150,
         backgroundColor:'#006BFF',
         flexDirection: 'row'
       }}>  
@@ -170,7 +186,7 @@ const Leaderboard = () => {
       <Text style= {{
           fontSize: 17,
           alignSelf: 'center',
-          paddingTop: 20,
+          paddingTop: 120,
           fontWeight: 500,
           color: '#001F70'
       }}>
