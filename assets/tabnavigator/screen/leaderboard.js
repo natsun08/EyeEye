@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, SafeAreaView,Image,  Item, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {FlatList,Image, StyleSheet, Text, View} from 'react-native';
 import { Card } from 'react-native-paper';
 
 DATA = [
@@ -71,13 +71,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: '700',
     height: 40,
-  },
-  score: {
-    paddingLeft: 20,
-    padding: 10,
-    fontSize: 19,
-    height: 40,
-    
+    color: '#001F70'
   },
   tinyLogo: {
     flex:1,
@@ -90,6 +84,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     overflow: "hidden",
   },
+  score: {
+    color: '#001F70'
+  },  
   text: {
     paddingBottom:12,
     paddingLeft: 15,
@@ -106,7 +103,7 @@ const Leaderboard = () => {
       <View style={{
         paddingTop: 30,
         marginTop:-20,
-        width:410,
+        width:420,
         height:200,
         backgroundColor:'#006BFF',
         flexDirection: 'row'
@@ -174,7 +171,8 @@ const Leaderboard = () => {
           fontSize: 17,
           alignSelf: 'center',
           paddingTop: 20,
-          fontWeight: 500
+          fontWeight: 500,
+          color: '#001F70'
       }}>
         Tuần này
       </Text>
@@ -182,6 +180,7 @@ const Leaderboard = () => {
         paddingLeft: 30,
         paddingBottom: 15,
         paddingTop: 20,
+        color: '#001F70'
       }}>
         Thứ hạng sống khỏe
       </Text>
@@ -192,7 +191,8 @@ const Leaderboard = () => {
             <Text style={{
               fontSize:15,
               paddingTop: 15,
-              fontWeight:'bold'
+              fontWeight:'bold',
+              color: '#001F70'
             }}>
               {x++}
             </Text>
@@ -203,7 +203,7 @@ const Leaderboard = () => {
             />
             <View style={styles.text}>
               <Text style={styles.name}>{item.username}</Text>
-              <Text style={styles.item}>   Chỉ số sống khỏe: {item.score}/10</Text>
+              <Text style={styles.score}>   Chỉ số sống khỏe: {item.score}/10</Text>
             </View>
         </View>}
         keyExtractor={item => item.id}
