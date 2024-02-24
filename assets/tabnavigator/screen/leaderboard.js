@@ -8,42 +8,42 @@ import { db } from '../../../firebase_config';
 DATA = [
   {id:1,
   username: "Mầm",
-  image:'../../../assets/mam.jpg',
+  image:"'../../../assets/mam.jpg'",
   score:9.8
   },
   {id:2,
     username: "Dưa",
-    image:'../../../assets/dua.jpg',
+    image:"'../../../assets/mam.jpg'",
     score:9
   },
   {id:3,
     username: "Tôm",
-    image:'../../../assets/tom.jpg',
+    image:"'../../../assets/mam.jpg'",
     score:7
   },
   {id:4,
     username: "Ná",
-    image:'../../../assets/dua.jpg',
+    image:"'../../../assets/mam.jpg'",
     score:5.5
   },
   {id:5,
     username: "Bo bo",
-    image:'../../../assets/dua.jpg',
+    image:"'../../../assets/mam.jpg'",
     score:4.5
   },
   {id:6,
     username: "Moon",
-    image:'../../../assets/dua.jpg',
+    image:"'../../../assets/mam.jpg'",
     score:4
   },
   {id:7,
     username: "Pate",
-    image:'../../../assets/dua.jpg',
+    image:"'../../../assets/mam.jpg'",
     score:3
   },
   {id:8,
     username: "Hoshi",
-    image:'../../../assets/dua.jpg',
+    image:"'../../../assets/mam.jpg'",
     score:3
   }
 ]
@@ -245,8 +245,8 @@ const Leaderboard = () => {
             </Text>
             <Image
                 style={styles.tinyLogo}
-                // source={{uri: item.image}}
-                source={require('../../../assets/dua.jpg')} //t k lấy url từ data đc huhu
+                source={{uri: item.image}}
+                // source={require('../../../assets/dua.jpg')} //t k lấy url từ data đc huhu
             />
             <View style={styles.text}>
               <Text style={styles.name}>{item.username}</Text>
