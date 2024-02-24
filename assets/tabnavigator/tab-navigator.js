@@ -10,13 +10,14 @@ import Setting from './screen/setting';
 const Tab = createBottomTabNavigator();
 
 
+
 function MyTabs() {
   return (
     <Tab.Navigator
       initialRouteName="Dashboard"
       screenOptions={{
         tabBarActiveTintColor: '#e91e63',
-        headerShown:false,
+        headerShown:false
       }}
     >
       <Tab.Screen
