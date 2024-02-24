@@ -13,6 +13,7 @@ export default function App() {
   const [mapLong, setMapLong] = useState(79.869319);
 
   return (
+
     <>
    <View style={styles.container}>
       <MapView
@@ -46,6 +47,7 @@ export default function App() {
       <TouchableOpacity style={styles.button3} onPress={handleButtonPress}>
         <Text style={styles.buttonText3}>Tình huống khẩn cấp</Text>
       </TouchableOpacity>
+
     </View>
     </>
   );
@@ -122,5 +124,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     
   },
-
 });
