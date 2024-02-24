@@ -134,7 +134,7 @@ const Leaderboard = () => {
 
     docref.forEach(user => {
       res.push(user);
-      console.log(user.data());
+      // console.log(user.data());
     })
     if(res.length==0){
       console.log("no data")
@@ -259,6 +259,10 @@ const Leaderboard = () => {
               paddingTop: 15,
               fontWeight:'bold',
               color: '#001F70'
+            }}
+            onPress={()=> {
+              console.log("meo")
+              console.log(item.image)
             }}>
               {x++}
             </Text>

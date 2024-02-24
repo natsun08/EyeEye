@@ -10,6 +10,7 @@ import Setting from './screen/setting';
 const Tab = createBottomTabNavigator();
 
 
+
 function MyTabs() {
   return (
     <Tab.Navigator
