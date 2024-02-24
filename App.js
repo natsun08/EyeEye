@@ -1,8 +1,8 @@
-// import { StatusBar } from 'expo-status-bar';
-// import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as eva from '@eva-design/eva';
+<<<<<<< Updated upstream
 import { ApplicationProvider,IconRegistry, Layout, Text  } from '@ui-kitten/components'
 import { EvaIconsPack } from '@ui-kitten/eva-icons'
 import { mapping, light as lightTheme } from '@eva-design/eva'
@@ -55,3 +55,23 @@ export default () => (
 //   },
 // });
 // này là stylesheet vô dụng vl nhưng k dám xóa lời nguyền của dev 
+=======
+import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
+import { EvaIconsPack } from '@ui-kitten/eva-icons';
+import StackNav from './assets/stackNavigator/stackNavigator';
+
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <>
+        <IconRegistry icons={EvaIconsPack} />
+        <ApplicationProvider {...eva} theme={eva.light}>
+          <StackNav />
+        </ApplicationProvider>
+      </>
+    </NavigationContainer>
+  );
+}
+>>>>>>> Stashed changes
