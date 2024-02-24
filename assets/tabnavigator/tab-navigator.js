@@ -16,6 +16,7 @@ function MyTabs() {
       initialRouteName="Dashboard"
       screenOptions={{
         tabBarActiveTintColor: '#e91e63',
+        headerShown:false,
       }}
     >
       <Tab.Screen

@@ -114,7 +114,7 @@ const Leaderboard = () => {
 
     docref.forEach(user => {
       res.push(user);
-      console.log(user.data());
+      // console.log(user.data());
     })
     if(res.length==0){
       console.log("no data")
@@ -221,13 +221,17 @@ const Leaderboard = () => {
               paddingTop: 15,
               fontWeight:'bold',
               color: '#001F70'
+            }}
+            onPress={()=> {
+              console.log("meo")
+              console.log(item.image)
             }}>
               {x++}
             </Text>
             <Image
                 style={styles.tinyLogo}
-                // source={{uri: item.image}}
-                source={require('../../../assets/dua.jpg')} //t k lấy url từ data đc huhu
+                // source={item.image.toString()}
+                source={require('../../../assets/dua.jpg' )} //t k lấy url từ data đc huhu                //t k lấy url từ data đc huhu
             />
             <View style={styles.text}>
               <Text style={styles.name}>{item.username}</Text>
