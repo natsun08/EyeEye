@@ -9,7 +9,7 @@ DATA = [
   {id:1,
   username: "Mầm",
   image:'../../../assets/mam.jpg',
-  score:2
+  score:9.8
   },
   {id:2,
     username: "Dưa",
@@ -24,7 +24,7 @@ DATA = [
   {id:4,
     username: "Ná",
     image:'../../../assets/dua.jpg',
-    score:4.5
+    score:5.5
   },
   {id:5,
     username: "Bo bo",
@@ -34,17 +34,17 @@ DATA = [
   {id:6,
     username: "Moon",
     image:'../../../assets/dua.jpg',
-    score:4.5
+    score:4
   },
   {id:7,
     username: "Pate",
     image:'../../../assets/dua.jpg',
-    score:4.5
+    score:3
   },
   {id:8,
     username: "Hoshi",
     image:'../../../assets/dua.jpg',
-    score:4.5
+    score:3
   }
 ]
 const styles = StyleSheet.create({
@@ -130,7 +130,7 @@ const Leaderboard = () => {
     <View style={styles.container}>
       <View
                 style={[{
-                    height: 240,
+                    height: '28.5%',
                     width: 500,
                     borderRadius: 100,
                     marginVertical: 0,
@@ -147,7 +147,7 @@ const Leaderboard = () => {
             ]}></View>
       <View style={{
         paddingTop: 30,
-        marginTop:-20,
+        marginTop:-25,
         width:420,
         height:150,
         backgroundColor:'#006BFF',
@@ -157,8 +157,8 @@ const Leaderboard = () => {
           style={{
             height: 120,
             width:120,
-            marginTop:20,
-            marginLeft: 20,
+            marginTop:'10%',
+            marginLeft: '8%',
             borderRadius: 70,
             overflow: "hidden",
             
@@ -166,7 +166,9 @@ const Leaderboard = () => {
           source={require('../../../assets/mam.jpg')}
       />
       
-      <View>
+      <View style={{
+        marginTop: '8%'
+      }}>
           <Text style={{
             alignSelf:'center',
             fontSize:30,
