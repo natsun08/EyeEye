@@ -1,12 +1,26 @@
-import React from 'react'
-import { StyleSheet, View, Text, Image, ScrollView, Button, Dimensions } from 'react-native';
-import PagerView from 'react-native-pager-view';
+import {React, useRef} from 'react'
+import {  StyleSheet, View, Text, Image, ScrollView, Button, Dimensions, Icon } from 'react-native';
 
 import DashboardPage from './dashboard-page.js/dashboard-page';
+
+const DATA = [
+  {id: 3,
+      score: 4,
+      date: '24/02/2024'},
+  {id: 2,
+      score: 4,
+      date: '23/02/2024'},
+  {id: 1,
+      score: 4,
+      date: '22/02/2024'},
+]
 
 const Dashboard = () => {
   
   const windowWidth = Dimensions.get('window').width;
+  w = windowWidth*2
+  
+  const scrollRef = useRef()
 
   return (
       
@@ -36,8 +50,9 @@ const Dashboard = () => {
                     fontSize:25,
                     color: '#FFFFFF',
                     fontWeight: 'bold'
+                    //tên ng dùng
                   }}>
-                    La Sắc Mầm
+                    La Sắc Mầm 
                 </Text>
                 </View>
                 <Image  //ảnh ava người dùng
@@ -54,10 +69,14 @@ const Dashboard = () => {
             </View>
             <View style={{
               flexDirection: 'row',
-              justifyContent: 'space-around'
+              justifyContent: 'center'
             }}>
-                <View style={styles.ButtonContainer}>
-                    <Button title="L" onPress={() => { this.scroll.scrollTo({ x: 0 }) }} />
+                <View style={{
+                  
+                }}>
+                    <Button title="◄"     
+                            color= '#C6DFFF'
+                            onPress={() => { this.ScrollView.scrollTo({ x: w-=windowWidth }) }} />
                 </View>
                 <Text style={{
                     alignSelf:'center'
@@ -65,7 +84,9 @@ const Dashboard = () => {
                     Sức khỏe của bạn
                 </Text>
                 <View style={styles.ButtonContainer}>
-                    <Button title="R" onPress={() => { this.scroll.scrollTo({ x: windowWidth }) }} />
+                    <Button title="►"
+                            color= '#C6DFFF'
+                            onPress={() => { this.ScrollView.scrollTo({ x: w+=windowWidth }) }} />
                 </View>
             </View>
             <View style={{flexDirection:'row'}}>
@@ -73,26 +94,24 @@ const Dashboard = () => {
                   horizontal={true}
                   pagingEnabled={true}
                   showsHorizontalScrollIndicator={false}
-                  ref={(node) => this.scroll = node}
+                  // ref={(node) => this.scroll = node}
                   style={{
                     width: windowWidth
                   }}
+                  ref={ref => {this.ScrollView = ref}}
+                  onContentSizeChange={() => this.ScrollView.scrollToEnd({animated: false})}
               >
-                  <View style={{
-                      width: windowWidth}}
-                    >
-                      <DashboardPage/>
-                  </View>
-                  <View style={{
-                      width: windowWidth
-                  }}>
-                      <DashboardPage/>
-                  </View>
-                  <View style={{
-                      width: windowWidth
-                  }}>
-                      <DashboardPage/>
-                  </View>
+                  {DATA.map (item => {
+                    return (
+                      <View style={{
+                        width: windowWidth}}
+                      >
+                        <DashboardPage/>
+                    </View>
+                    );
+                  })}
+                  
+                  
                   
               </ScrollView>
             </View>
