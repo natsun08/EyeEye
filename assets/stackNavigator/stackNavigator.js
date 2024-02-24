@@ -6,6 +6,7 @@ import MyTabs from '../tabnavigator/tab-navigator';
 import Blink from '../tabnavigator/screen/blink/blink';
 import Submit from '../tabnavigator/screen/submit/submit';
 import Thankyou from '../tabnavigator/screen/submit/thankyou';
+import PushNoti from '../push-noti/push-noti';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,6 +19,7 @@ return(
     <Stack.Screen name = "Blink" component={Blink} options={{headerShown:false}}/>
     <Stack.Screen name = "Submit" component={Submit} options={{headerShown:false}}/>
     <Stack.Screen name = "Thankyou" component={Thankyou} options={{headerShown:false}}/>
+    <Stack.Screen name = "PushNoti" component={PushNoti} options={{headerShown:false}}/>
 
 </Stack.Navigator>
 
