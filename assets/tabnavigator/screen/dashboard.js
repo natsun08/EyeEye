@@ -1,7 +1,6 @@
 import {React, useRef} from 'react'
 import {  StyleSheet, View, Text, Image, ScrollView, Button, Dimensions } from 'react-native';
-import { Icon, IconElement } from '@ui-kitten/components';
-import * as eva from '@eva-design/eva';
+import { Icon } from '@ui-kitten/components';
 
 
 // import DashboardPage from './dashboard-page.js/dashboard-page';
@@ -40,7 +39,7 @@ function Dashboard ({navigation})  {
         <View>
             <View
                 style={[{
-                    height: 190,
+                    height: '21%',
                     width: 500,
                     borderRadius: 100,
                     marginVertical: 0,
@@ -58,8 +57,8 @@ function Dashboard ({navigation})  {
               <View style={{
               paddingTop: 30,
               marginTop:-20,
-              width:420,
-              height:150,
+              width:'100%',
+              height:'18%',
               backgroundColor:'#006BFF',
               flexDirection: 'row',
               justifyContent: 'space-between'
@@ -67,7 +66,7 @@ function Dashboard ({navigation})  {
             
               <View style={{
                 paddingLeft: 30,
-                paddingTop: 10
+                paddingTop: '10%'
               }}>
                   <Text  style= {{
                       fontSize: 22,
@@ -89,7 +88,7 @@ function Dashboard ({navigation})  {
                   style={{
                     height: 100,
                     width:100,
-                    marginTop:20,
+                    marginTop:'15%',
                     marginRight:40,
                     borderRadius: 70,
                     overflow: "hidden",
