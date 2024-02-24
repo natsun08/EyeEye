@@ -4,46 +4,65 @@ import {FlatList, SafeAreaView,Image,  Item, ScrollView, StyleSheet, Text, View}
 import { Card } from 'react-native-paper';
 import { db } from '../../../firebase_config';
 
+import MamImage from './../../../assets/mam.jpg';
+import DuaImage from './../../../assets/dua.jpg';
+import TomImage from './../../../assets/tom.jpg';
+import GuImage from './../../../assets/gu.jpg';
+import NaImage from './../../../assets/na.jpg';
+import CocImage from './../../../assets/coc.jpg';
+import MoonImage from './../../../assets/moon.jpg';
+import CiumamImage from './../../../assets/ciumam.jpg';
+
+
+const MAM_IMAGE = Image.resolveAssetSource(MamImage).uri;
+const DUA_IMAGE = Image.resolveAssetSource(DuaImage).uri;
+const TOM_IMAGE = Image.resolveAssetSource(TomImage).uri;
+const GU_IMAGE = Image.resolveAssetSource(GuImage).uri;
+const COC_IMAGE = Image.resolveAssetSource(CocImage).uri;
+const MOON_IMAGE = Image.resolveAssetSource(MoonImage).uri;
+const CIUMAM_IMAGE = Image.resolveAssetSource(CiumamImage).uri;
+const NA_IMAGE = Image.resolveAssetSource(NaImage).uri;
+
 
 DATA = [
   {id:1,
   username: "Mầm",
-  image:'../../../assets/mam.jpg',
+  image:MAM_IMAGE,
   score:9.8
   },
   {id:2,
     username: "Dưa",
-    image:'../../../assets/dua.jpg',
+    image:DUA_IMAGE,
     score:9
   },
   {id:3,
     username: "Tôm",
-    image:'../../../assets/tom.jpg',
+    image:TOM_IMAGE,
     score:7
   },
   {id:4,
     username: "Ná",
-    image:'../../../assets/dua.jpg',
+    image:NA_IMAGE,
     score:5.5
   },
   {id:5,
     username: "Bo bo",
-    image:'../../../assets/dua.jpg',
+    image:GU_IMAGE,
     score:4.5
   },
   {id:6,
     username: "Moon",
-    image:'../../../assets/dua.jpg',
+    image:MOON_IMAGE,
     score:4
   },
   {id:7,
     username: "Pate",
-    image:'../../../assets/dua.jpg',
+    image:COC_IMAGE,
     score:3
   },
   {id:8,
     username: "Hoshi",
-    image:'../../../assets/dua.jpg',
+    image:CIUMAM_IMAGE,
     score:3
   }
 ]
@@ -249,8 +268,8 @@ const Leaderboard = () => {
             </Text>
             <Image
                 style={styles.tinyLogo}
-                // source={item.image.toString()}
-                source={require('../../../assets/dua.jpg' )} //t k lấy url từ data đc huhu                //t k lấy url từ data đc huhu
+                source={{uri: item.image}}
+                // source={require('../../../assets/dua.jpg')} //t k lấy url từ data đc huhu
             />
             <View style={styles.text}>
               <Text style={styles.name}>{item.username}</Text>
