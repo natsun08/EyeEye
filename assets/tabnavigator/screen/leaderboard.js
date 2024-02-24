@@ -44,7 +44,6 @@ DATA = [
     score:4.5
   }
 ]
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

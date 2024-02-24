@@ -7,7 +7,8 @@ import Map from './screen/map';
 import Leaderboard from './screen/leaderboard';
 import Setting from './screen/setting';
 
-const Tab = createBottomTabNavigator()
+const Tab = createBottomTabNavigator();
+
 
 function MyTabs() {
   return (
