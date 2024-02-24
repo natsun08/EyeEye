@@ -48,7 +48,7 @@ const Setting = () => {
           fontSize:25,
           fontWeight: 'bold',
           color:'#FFFFFF',
-        }}> La Sắc Mầm</Text>
+        }} onPress={()=>{navigation.navigate("PushNoti")}}> La Sắc Mầm</Text>
         <Text style ={{
           fontSize:15,
           fontWeight: 'bold',

@@ -58,25 +58,25 @@ function Dashboard ({navigation})  {
               paddingTop: 30,
               marginTop:-20,
               width:'100%',
-              height:'18%',
+              height:'16%',
               backgroundColor:'#006BFF',
               flexDirection: 'row',
               justifyContent: 'space-between'
             }}> 
             
               <View style={{
-                paddingLeft: 30,
+                paddingLeft: 40,
                 paddingTop: '10%'
               }}>
                   <Text  style= {{
-                      fontSize: 22,
+                      fontSize: 25,
                       color: '#FFFFFF',
                       paddingTop: 40,
-                  }}>
+                  }} onPress={()=>{navigation.navigate("PushNoti")}}>
                     Xin chào,
                   </Text>
                   <Text style={{
-                    fontSize:25,
+                    fontSize:30,
                     color: '#FFFFFF',
                     fontWeight: 'bold'
                     //tên ng dùng
@@ -99,7 +99,7 @@ function Dashboard ({navigation})  {
             <View style={{
               flexDirection: 'row',
               justifyContent: 'center',
-              paddingTop: 100
+              paddingTop: 113
             }}>
                 <View style={{
                   
@@ -146,7 +146,7 @@ function Dashboard ({navigation})  {
                             <Text style={{
                                 alignSelf:'center',
                                 fontSize: 20,
-                                fontWeight: '500',
+                                fontWeight: '700',
                             }}>
                                 {item.date}
                             </Text>
