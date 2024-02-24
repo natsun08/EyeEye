@@ -1,6 +1,9 @@
-import React from 'react';
-import {FlatList,Image, StyleSheet, Text, View} from 'react-native';
+import { collection, getDocs, onSnapshot, query, where } from 'firebase/firestore';
+import React, {useEffect, useState} from 'react';
+import {FlatList, SafeAreaView,Image,  Item, ScrollView, StyleSheet, Text, View} from 'react-native';
 import { Card } from 'react-native-paper';
+import { db } from '../../../firebase_config';
+
 
 DATA = [
   {id:1,
@@ -44,7 +47,6 @@ DATA = [
     score:4.5
   }
 ]
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -96,7 +98,34 @@ const styles = StyleSheet.create({
 });
 
 const Leaderboard = () => {
-   x=1; //để print ra stt 1 2 3 4 5 cho leaderboard
+  x=1; //để print ra stt 1 2 3 4 5 cho leaderboard
+
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const fetchData = async() =>{
+    setLoading(true)
+    const docref = await getDocs(query(collection(db, "user"), where("manager", "!=", "'0'")))
+    .catch((error) =>{
+      console.log(error.message);
+    }
+
+    )
+    const res =[]
+
+    docref.forEach(user => {
+      res.push(user);
+      console.log(user.data());
+    })
+    if(res.length==0){
+      console.log("no data")
+    }
+    setUsers([...res]);
+    setLoading(false)
+  }
+  useEffect(() =>{
+    fetchData();
+    },[])
   return (
     <View style={styles.container}>
       <View
@@ -144,7 +173,7 @@ const Leaderboard = () => {
             color: '#FFFFFF',
             fontWeight: 'bold'
           }}>
-            La Sắc Mầm
+            La Sắc Mầm 
           </Text>
           <Text  style= {{
               fontSize: 15,

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "616891630617",
+    "firebase_url": "https://eyeeye-31840-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "eyeeye-31840",
+    "storage_bucket": "eyeeye-31840.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616891630617:android:f11aa8d1da09d92cebd688",
+        "android_client_info": {
+          "package_name": "com.giadinhsocho.eyeeye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "616891630617-0lmvui7comirnps1lflh84lob43j02nc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUcomN2xCYij-d-khQU7ej213IX-i6Df4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "616891630617-0lmvui7comirnps1lflh84lob43j02nc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "616891630617-u486c151t2lvqh3hjfn6hbv53hq6upca.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.giadinhsocho.eyeeye"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
