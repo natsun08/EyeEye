@@ -7,6 +7,7 @@ import Blink from '../tabnavigator/screen/blink/blink';
 import Onboarding1 from '../onboarding/onboarding';
 import Onboarding2 from '../onboarding/onboarding2';
 import Onboarding3 from '../onboarding/onboarding3';
+import Onboarding4 from '../onboarding/onboarding4';
 const Stack = createNativeStackNavigator();
 
 function StackNav() {
@@ -15,6 +16,8 @@ return(
     <Stack.Screen name = "Onboarding1" component={Onboarding1} options={{ headerShown: false}} />
     <Stack.Screen name = "Onboarding2" component={Onboarding2} options={{ headerShown: false}} />
     <Stack.Screen name = "Onboarding3" component={Onboarding3} options={{ headerShown: false}} />
+    <Stack.Screen name = "Onboarding4" component={Onboarding4} options={{ headerShown: false}} />
+
     <Stack.Screen name = "Login" component={Login} options={{ headerShown: false}} />
     <Stack.Screen name = "Regist" component={Regist} options={{ headerShown: false }}/>
     <Stack.Screen name = "App" component={MyTabs} options={{headerShown:false}}/>

@@ -77,7 +77,7 @@ const Onboarding2 = ({navigation}) => {
               <Text style={[styles.text]}>Theo dõi tình trạng</Text>
               <Text style={[styles.head]}>Sức khoẻ của mắt</Text>
               <Button title="Back" onPress={() => navigation.goBack()} />
-              <Button title="Next" onPress={() => navigation.navigate('Onboarding3')} />
+              <Button title="Next" onPress={() => navigation.navigate('Onboarding4')} />
           </View></>
   );
 };
