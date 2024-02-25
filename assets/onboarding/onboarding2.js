@@ -79,7 +79,7 @@ const Onboarding2 = ({ navigation }) => {
         source={require('../Asset6.png')}
         style={[styles.image2, { transform: [{ rotate: wiggle2 }] }]} />
     <View style={styles.button}>
-        <Button title="Next" onPress={() => navigation.navigate('Onboarding3')} color='#ffffff' />
+        <Button title="Next" onPress={() => navigation.navigate('Onboarding3')} color='#006BFF' />
       </View>
       </View></>
   );

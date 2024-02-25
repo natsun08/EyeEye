@@ -80,7 +80,7 @@ const Onboarding4 = ({ navigation }) => {
         source={require('../phone_1.png')}
         style={[styles.image2, { transform: [{ rotate: wiggle2 }] }]} />
     <View style={styles.button}>
-        <Button title="Next" onPress={() => navigation.navigate('Login')} color='#ffffff' />
+        <Button title="Next" onPress={() => navigation.navigate('Login')} color='#006BFF' />
       </View>
       </View></>
   );
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     },
   sub: {
       top: 550,
-      left: -40,
+      left: -35,
       fontWeight: '300',
       fontSize: 16,
       color: '#ffffff',
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
   },
   head1: {
     top: 560,
-    left: -110,
+    left: -100,
     fontWeight: '600',
     fontSize: 24,
     color: '#ffffff',
