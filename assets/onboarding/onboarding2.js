@@ -121,14 +121,14 @@ const styles = StyleSheet.create({
     },
   sub: {
       top: 550,
-      left: -70,
+      left: -90,
       fontWeight: '300',
       fontSize: 16,
       color: '#ffffff',
   },
   head: {
       top: 555,
-      left: -35,
+      left: -55,
       fontWeight: '600',
       fontSize: 24,
       color: '#ffffff',
