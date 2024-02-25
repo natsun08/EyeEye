@@ -14,7 +14,15 @@ function Login({ navigation }) {
     useEffect(()=>{
         auth.onAuthStateChanged(user =>{
             if(user){
-                navigation.navigate("App")
+                if(user.email == 'amuchan134@gmail.com')
+                {
+                    navigation.navigate("CompNav")
+                }
+                if(user.email != 'amuchan134@gmail.com')
+                {
+                    navigation.navigate("App")
+
+                }
             }
         })
     }, [])
