@@ -53,7 +53,7 @@ const Onboarding1 = ({navigation}) => {
         />
         {loading && <Text style={styles.loadingText}>Loading...</Text>}
         <View style={styles.buttonContainer}>
-        <Button title="Next" onPress={() => navigation.navigate('Onboarding2')} />
+        <Button title="Next" color={'#006BFF'} onPress={() => navigation.navigate('Onboarding2')} />
       </View>
 
       </View>

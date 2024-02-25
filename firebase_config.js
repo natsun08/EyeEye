@@ -29,7 +29,7 @@ const analytics = () => {
   return null;
 }
 const auth = initializeAuth(app, {persistence: getReactNativePersistence(ReactNativeAsyncStorage)});
-initializeRecaptchaConfig(auth);
+initializeRecaptchaConfig(auth).catch((error) =>{});
 const db = getFirestore(app);
 
 export{ app, analytics, db ,auth}

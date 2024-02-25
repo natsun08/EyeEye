@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   },
   name: {
     padding: 10,
-    fontSize: 25,
+    fontSize: 23,
     fontWeight: '700',
     height: 40,
     color: '#001F70'
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   },  
   text: {
     paddingBottom:12,
-    paddingLeft: 15,
+    paddingLeft: 13,
     flex:2,
     alignSelf: 'center'
   }
@@ -190,7 +190,7 @@ const Leaderboard = () => {
       }}>
           <Text style={{
             alignSelf:'center',
-            fontSize:30,
+            fontSize:25,
             color: '#FFFFFF',
             fontWeight: 'bold'
           }}>
@@ -212,10 +212,9 @@ const Leaderboard = () => {
             paddingLeft: 50
           }}>
             <Text style= {{
-                fontSize: 70,
+                fontSize: 50,
                 color: '#FFFFFF',
                 fontWeight: 'bold'
-                  //điền rank vào nha rip hachi
             }}>
               3
             </Text> 
@@ -224,10 +223,10 @@ const Leaderboard = () => {
               paddingLeft: 20,
               alignSelf: 'flex-start',
               color: '#FFFFFF',
-              fontSize: 10,
+              fontSize: 12,
               fontWeight: '600'
             }}>
-              Tăng X bậc so với{"\n"}
+              Tăng 2 bậc so với{"\n"}
               tuần trước
             </Text>
           </View>

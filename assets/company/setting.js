@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Text, Menu, Icon, IconElement, MenuItem, Avatar, Toggle, IndexPath, Divider } from '@ui-kitten/components';
 import{View, Image, Dimensions, SectionList, FlatList, Button, Pressable, TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/core';
-import { auth } from '../../../firebase_config';
+import { auth } from '../../firebase_config';
 
 
 const Setting = () => {
@@ -41,19 +41,19 @@ const Setting = () => {
         style={{height: windowHeight*0.17,
                 width: windowHeight*0.17,
                 }}
-        source={require('../../../assets/mam.jpg')}/>
+        source={require('../ava.jpg')}/>
         <View  style = {{paddingLeft: 20,
         flexDirection: 'column'}}>
         <Text style ={{
           fontSize:25,
           fontWeight: 'bold',
           color:'#FFFFFF',
-        }} onPress={()=>{navigation.navigate("PushNoti")}}> La Sắc Mầm</Text>
+        }} onPress={()=>{navigation.navigate("PushNoti")}}> Đào Minh Mầm</Text>
         <Text style ={{
           fontSize:15,
           fontWeight: 'bold',
           color: '#E0E3F1'
-        }}> 0911111111</Text>
+        }}> 0914395098</Text>
         </View>
       </View>
       
