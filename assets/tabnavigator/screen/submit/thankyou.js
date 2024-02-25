@@ -33,13 +33,18 @@ function Thankyou ({navigation}) {
                     </Text>  
                 </View>
             </View>
-            <Text>
-                Hiệu ứng thật ố dề
-            </Text>
+            {/* <Image 
+                style={{
+                    marginTop: '8%',
+                    width:'65%',
+                    height:'51%',
+                    alignSelf:'center'
+                }}
+                source={require('../../../ciumam.jpg')}/> */}
             <Text style={{
                 alignSelf:'center',
                 textAlign: 'center',
-                paddingTop: '80%',
+                paddingTop: '70%',
                 fontSize: 26,
                 fontWeight: 'bold',
                 color:'#006BFF'
@@ -57,15 +62,13 @@ function Thankyou ({navigation}) {
             </Text>
             <Image  //logo
                         style={{
-                        height: 50,
-                        width:50,
-                        borderRadius: 50,
-                        overflow: "hidden",
+                        height: 52,
+                        width:65,
                         alignSelf: 'center',
                         position: 'absolute',
                         marginTop: 800
                         }}
-                        source={require('../../../tom.jpg')}
+                        source={require('../../../logo.png')}
                     />
         </View>
     )
